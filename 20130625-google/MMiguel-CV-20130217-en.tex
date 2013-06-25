@@ -1,99 +1,41 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass[a4paper,10pt,sans]{moderncv}
+
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
 %A Few Useful Packages
-\usepackage{marvosym}
-\usepackage{url,parskip}			%formatting
+\usepackage[scale=0.75]{geometry} % Reduce document margins
 \usepackage[utf8]{inputenc} 
-\usepackage{multirow}
 
-%Graphics - Colors
-\RequirePackage{color,graphicx}
-\usepackage[usenames,dvipsnames]{xcolor}
-% %better formatting of the A4 page
-\usepackage[big]{layaureo}
-%An alternative to Layaureo can be usepackage{fullpage}
- 
-\usepackage{supertabular} 		%for Grades
-\usepackage{titlesec}			%custom section
- 
-%Setup hyperref package, and colours for links
-\usepackage{hyperref}
-\definecolor{linkcolour}{rgb}{0,0.2,0.6}
-\hypersetup{colorlinks,breaklinks, urlcolor=linkcolour, linkcolor=linkcolour}
 
-% \pagestyle{empty} % non-numbered pages
 \usepackage[english]{babel}
-\usepackage{slantsc}
-\usepackage{array}
 \usepackage{amsmath}
+\usepackage{float}
 
-%FONTS
-\usepackage[T1]{fontenc}
-%\usepackage{arev}
-%\newcommand{\fancyfont}{\fontfamily{avec}\selectfont}
-
-%CV Sections inspired by:
-%http://stefano.italians.nl/archives/26
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{3pt}{3pt}
-
-%XeTeX
-%\usepackage{fontspec}			%load fonts
-%\usepackage{xunicode,xltxtra} 	%other packages for XeTeX
-%\defaultfontfeatures{Mapping=tex-text}
-%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
-
-
-%workEntry(end time, start time, job position, company, description)
-\newcommand{\workEntry}[5]{
-\begin{tabular}{p{1.7cm}|p{11cm}}
-\raggedleft \textsc{#1} & #3 \\
-\raggedleft \textsc{#2} & \emph{#4} \\
-& \footnotesize{#5}\\
-\multicolumn{2}{c}{}\ %this clears the space between two jobs
-%some other job here
-\end{tabular}
+\newcommand{\cvgradeitem}[2]{
+    \begin{minipage}[t]{1.2\cvitemwithcommentmainlength}#1\end{minipage}%
+    \hfill% fill of \separatorcolumnwidth
+    \begin{minipage}[t]{0.8\cvitemwithcommentcommentlength}\raggedleft\small\bfseries#2\end{minipage}}}
 }
 
-\newcommand{\dateEntry}[4]{
-\begin{tabular}{p{1.7cm}|p{11cm}}
-\raggedleft \textsc{#1} & #3 \\
-\raggedleft \textsc{#2} & \footnotesize{#4}\\
-\multicolumn{2}{c}{}\ %this clears the space between two jobs
-%some other job here
-\end{tabular}
-}
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
 
-\newcommand{\resEntry}[1]{
-\begin{tabular}{p{1.7cm}|p{11cm}}
-& #1 \\
-\multicolumn{2}{c}{}\
-\end{tabular}
-}
+\firstname{Martin} % Your first name
+\familyname{Miguel} % Your last name
 
-\newcommand{\resEntryD}[2]{
-\begin{tabular}{p{1.7cm}|p{11cm}}
-& #1 \\
-& \emph{#2} \\
-\multicolumn{2}{c}{}\
-\end{tabular}
-}
+% All information in this block is optional, comment out any lines you don't need
+\title{Curriculum Vitae}
+\address{Almagro, Capital Federal}{Buenos Aires, Argentina}
+\mobile{54-11-31816018}
+\phone{54-11-4983-4768}
+\email{m2.march@gmail.com}
+\photo[100pt][0.4pt]{../MMiguel-foto.jpeg} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
 
 \begin{document}
 
-\par{\centering
-{\huge{\textsc{Mart\'in A. Miguel}} }
-\bigskip\par}
-
-%Section: Personal Data
-\section{Personal Data}
-\begin{tabular}[c]{rp{7.5cm}r}
-\textsc{Date of Birth:} & June $10^{th}$ 1990 & \multirow{4}{*}{\includegraphics[scale=0.17]{../MMiguel-foto.jpeg}}\\
-\textsc{Location:}	& Almagro, Capital Federal, \newline Buenos Aires, Argentina & \\
-\textsc{Phone:}	& 4983-4768 15-3181-6018 & \\
-\textsc{email:}	& \href{mailto:m2.march@gmail.com}{m2.march@gmail.com} & \\
-
-\end{tabular}
+\makecvtitle
 
 %Section: Objective
 \section{Objective}
@@ -101,92 +43,109 @@ My current professional objective focuses on the development of my personal skil
 
 %Section: Profile
 \section{Professional/Personal Profile}
-\begin{itemize}
- \item Analytical, efficiency-seeker
- \item Methodical, reliable 
- \item Curious, investigator, innovator
- \item Well-mannered, affable, thoughtful
-\end{itemize}
+ \cvlistitem{Analytical, efficiency-seeker}
+ \cvlistitem{Methodical, reliable}
+ \cvlistitem{Curious, investigator, innovator}
+ \cvlistitem{Well-mannered, affable, thoughtful}
 
 %Section: Work Experience
 \section{Work Experience}
-\workEntry{Today}{August 2012}{Programador Java}{Despegar.com}{}
+\cventry{Today \\ August 2012}{Java Programmer}{Despegar.com}{}{}{}
 
-\workEntry{July 2012}{March 2011}{Assistant Teacher at UBA Computer Science course}{Universidad de Buenos Aires - FCEyN}{}
+\cventry{July 2012 \\ March 2011}{Assistant Teacher at UBA Computer Science course}{Universidad de Buenos Aires - FCEyN}{}{}{}
 
-\workEntry{January 2010}{January 2009}{Jr. Java Programmer (J2ME / Blackberry)}{SenseByte}{}
+\cventry{January 2010 \\ January 2009}{Jr. Java Programmer (J2ME / Blackberry)}{SenseByte}{}{}{}
 
 
 %Section: Education
 \section{Education}
-\workEntry{2012}{2009}{Computer Science}{Universidad de Buenos Aires - FCEyN}%
-{}
+\cventry{2012--2009}{Computer Science}{Universidad de Buenos Aires - FCEyN}{}{}{}
 
-\dateEntry{2008}{}{Compulsory Pre-University Course (CBC)}%
-{Finished}
+\cventry{2008}{Compulsory Pre-University Course (CBC)}%
+{Finished}{}{}{}
 
-\workEntry{2007}{2003}{Comunication Oriented Bachelorship}{Instituto SUMMA}{}
+\cventry{2007--2003}{Comunication Oriented Bachelorship}{Instituto SUMMA}{}{}{}
 
 \section{English Studies - Advanced Level}
-\workEntry{2006}{}{FCE - First Certificate in English}{AACI}{Grade A\newline
-\hspace*{0.15cm} \emph{University of Cambridge, ESOL Examinations}}
+\cventry{2006}{FCE - First Certificate in English}{AACI}{Grade A\newline
+\hspace*{0.15cm} \emph{University of Cambridge, ESOL Examinations}}{}{}
 
-\workEntry{2004}{}{CILE 3 - English Certificate}{Facultad de Filosof\'ia y Letras, UBA}%
-{Score: 80/100}
+\cventry{2004}{CILE 3 - English Certificate}{Facultad de Filosof\'ia y Letras, UBA}%
+{Score: 80/100}{}{}
 
 \section{IT Profile}
 \subsection{Programming Lenguages}
 
-\begin{table}[h!]
-\centering
-\begin{tabular}{ | l | c | }
-\hline
-\textbf{Language} & \textbf{Skill level} \\
-\hline
-C & Advanced \\
-C++ & Working \\
-Java & Advanced \\
-Groovy & Working \\
-Python & Working \\
-Intel x86 Assembler & Working \\
-Haskell & Learners \\
-ActionScript 2.0 & Learners \\
-Scala & Working \\
-Ruby & Learners \\
-LaTeX & Working \\
-Octave & Working \\
-\hline
-\end{tabular}
-\end{table}
+\cvitemwithcomment{Advanced}{C, C++, Java}{}
+\cvitemwithcomment{Working}{Groovy, Python, Intel x86 Assembler, Scala, \LaTeX, Octave}{}
+\cvitemwithcomment{Learners}{Haskell, ActionScript 2.0, Ruby}{}
 
 \subsection{IT Achievements}
 
-\resEntry{Research work on algorithm optimisation using SIMD (Intel's SEE instruction set)}{}
+\cvitem{}{Research work on algorithm optimisation using SIMD (Intel's SEE instruction set)}
 
-\resEntry{Research work on heuristics methods to play a Zero-Sum board game}{}
+\cvitem{}{Research work on heuristics methods to play a Zero-Sum board game}
+\cvitem{}{Development of a basic monolithic kernel for x86 architecture based on UNIX ideas}
 
-\resEntry{Development of a basic monolithic kernel for x86 architecture based on UNIX ideas}{}
-
-\resEntry{Experience on 3-stage software development starting on model specification in a theoretical level, %
+\cvitem{}{Experience on 3-stage software development starting on model specification in a theoretical level, %
 moving to data structures definition in order to meet complexity restrictions, finishing in actual implementation %
 of the defined code.}
 
+\subsection{Transcript}
+
+\cvitem{Compulsory}{
+\begin{itemize}
+\item \cvgradeitem{Calculus}{9}
+\item \cvgradeitem{Algebra}{5}
+\item \cvgradeitem{Probability and Statistics}{10}
+\item \cvgradeitem{Algorithms and Data Structures I}{10}
+\item \cvgradeitem{Algorithms and Data Structures II}{10}
+\item \cvgradeitem{Algorithms and Data Structures III}{9}
+\item \cvgradeitem{Computer System Architecture I}{8}
+\item \cvgradeitem{Computer System Architecture II}{8}
+\item \cvgradeitem{Operating System}{10}
+\item \cvgradeitem{Numerical Methods}{10}
+\item \cvgradeitem{Software Engineering}{7}
+\item \cvgradeitem{Database Systems}{Final Exam Pending}
+\item \cvgradeitem{Logic and Computability Theory}{9}
+\item \cvgradeitem{Language Theory}{10}
+\item \cvgradeitem{Programming Languages Paradigms}{10}
+\end{itemize}
+}
+
+\cvitem{Optional}{
+\begin{itemize}
+\item \cvgradeitem{Neural Networks}{Final Exam Pending}
+\item \cvgradeitem{Introduction to Speech Technologies}{9}
+\item \cvgradeitem{Game Theory}{Final Exam Pending}
+\item \cvgradeitem{Operating Systems Development}{Final Exam Pending}
+\item \cvgradeitem{Machine Learning}{Final Exam Pending}
+\end{itemize}
+}
+
+\cvitemwithcomment{}{}{Grade scale: 10}
+
 \subsection{Interests}
+
+\cvitem{}{Special interest in computer music. Looking forward starting a \textsf{Master Thesis} on \emph{automatic transcription} or \emph{assisted composition}.}
+\cvitem{}{Special interest in sound disciplines such as \emph{speech processing} and \emph{speech production}.}
+\cvitem{}{Special interest in \emph{human behaviour modeling} through \emph{machine learning methods}.}
+\cvitem{}{Special interest in low-level software development and \emph{real-time systems}.}
 
 \subsection{Other technical knowledge}
 
-\resEntry{Graphic and web design tools expertise: Adobe Photoshop, Adobe Flash}{}
+\cvitem{}{Graphic and web design tools expertise: Adobe Photoshop, Adobe Flash}
 
-\resEntry{Familiar with both Microsoft and Linux OS Technologies (Windows, Ubuntu)}{}
+\cvitem{}{Familiar with both Microsoft and Linux OS Technologies (Windows, Ubuntu)}
 
 
 \section{References}
-\resEntryD{\textbf{Lic. Leandro Gleizer}}%
-{Journalism, Radio and TV Teacher \newline
+\cvitemwithcomment{}{\textbf{Lic. Leandro Gleizer}}%
+{Journalism, Radio and TV Teacher \qquad
 \href{mailto:leandrogleizer@hotmail.com}{leandrogleizer@hotmail.com}}\\
 
-\resEntryD{\textbf{Gizzela Colona}}%
-{AACI English Teacher \newline
+\cvitemwithcomment{}{\textbf{Gizzela Colona}}%
+{AACI English Teacher  \qquad
 \href{mailto:gizzella32@yahoo.co.uk}{gizzella32@yahoo.co.uk}}\\
 
 \end{document}
