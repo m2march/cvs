@@ -1,0 +1,29 @@
+Compuslory
+----------
+Calculus : 9
+Algebra : 5
+Probability and Statistics : 10
+Algorithms and Data Structures I : 10
+Algorithms and Data Structures II : 10
+Algorithms and Data Structures III : 9
+Computer System Architecture I : 8
+Computer System Architecture II : 8
+Operating Systems : 10
+Numerical Methods : 10
+Software Engineering I : 7
+Software Engineering II : 9
+Systems Networks : Final Exam Grade Pending
+Database Systems : Final Exam Pending
+Logic and Computability Theory : 9
+Language Theory : 10
+Programming Paradigms : 10
+
+Optional
+--------
+Neural Networks : Final Exam Pending
+Introduction to Speech Technologies : 9
+Game Theory : Final Exam Pending
+Operating Systems Development : 10
+Machine Learning : Final Exam Pending
+
+Grade scale: 10
