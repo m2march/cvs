@@ -69,7 +69,7 @@
 % lengths
 \newlength{\quotewidth}
 \newlength{\hintscolumnwidth}
-\setlength{\hintscolumnwidth}{0.175\textwidth}
+\setlength{\hintscolumnwidth}{0.200\textwidth}
 \newlength{\separatorcolumnwidth}
 \setlength{\separatorcolumnwidth}{0.025\textwidth}
 \newlength{\maincolumnwidth}
@@ -203,7 +203,7 @@
   \cvitem[#1]{#2}{%
     {\bfseries#3}%
     \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}%
-    \ifthenelse{\equal{#5}{}}{}{, #5}%
+    \ifthenelse{\equal{#5}{}}{}{ \textendash\  #5}%
     \ifthenelse{\equal{#6}{}}{}{, #6}%
     \strut%
     \ifx&#7&%
