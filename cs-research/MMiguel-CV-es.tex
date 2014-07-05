@@ -1,0 +1,124 @@
+\documentclass[a4paper,10pt,sans]{moderncv}
+
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+%A Few Useful Packages
+\usepackage[scale=0.75]{geometry} % Reduce document margins
+\usepackage[utf8]{inputenc} 
+
+
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{float}
+
+\newcommand{\cvgradeitem}[2]{
+    \begin{minipage}[t]{1.2\cvitemwithcommentmainlength}#1\end{minipage}%
+    \hfill% fill of \separatorcolumnwidth
+    \begin{minipage}[t]{0.8\cvitemwithcommentcommentlength}\raggedleft\small\bfseries#2\end{minipage}}}
+}
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Martin} % Your first name
+\familyname{Miguel} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{Curriculum Vitae}
+\address{Almagro, Capital Federal}{Buenos Aires, Argentina}
+\mobile{54-11-31816018}
+\phone{54-11-49834768}
+\email{m2.march@gmail.com}
+\photo[100pt][0.4pt]{../MMiguel-foto.jpeg} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+
+\begin{document}
+
+\makecvtitle
+
+%Section: Objective
+\section{Objective}
+Mi actual objetivo es participar en proyectos apasionantes de gran valor. Me interesa utilizar mi creatividad, iniciativa y mis habilidades técnicas y humanas para el emprendimiento de tales proyectos. Deseo expandir y profundizar mis habilidades técnicas para poder ofrecer soluciones de mayor precisión y solidez de manera más rápida; así como lograr enfrentar nuevos desafíos. Busco tambien mejorar mis habilidades humanas \textendash entender procesos, metodologías de organización, requerimientos suaves y dinámicas intrapersonales \textendash que son clave para el éxito de los emprendimientos. En resumen, mi ambición es el diseño de planes y emprendimientos para luego llevarlos a cabo. 
+
+%Section: Profile
+\section{Perfil Personal/Profesional}
+ \cvlistitem{Metódico y analítico}
+ \cvlistitem{Responsable y confiable}
+ \cvlistitem{Curioso y creativo}
+ \cvlistitem{Apasionado, motivado}
+ \cvlistitem{Respetuoso y cálido}
+
+%Section: Work Experience
+\section{Experiencia Laboral}
+\cventry{Enero 2014 \\ Abril 2014}{Ingeniero de Software (Pasantía)}{Google.com}{Desarrollo y extensión de frameworks de testing para tests de performance, tests funcionales y tests de regresión.}{}{}
+
+\cventry{Diciembre 2013 \\ Agosto 2012}{Programador Java}{Despegar.com}{Desarrollo de componentes para integrar en un sistema de software de mayor escala. Desarrollo de aplicaciones web y frameworks utilitarios. }{}{}
+
+\cventry{Julio 2012 \\ Marzo 2011}{Ayudante de 2^{da} en las materiasi \emph{Algoritmos y Estructuras de Datos I \& II}}{Lic. en Ciencias de la Computación - Universidad de Buenos Aires}{}{}{}
+
+\cventry{Enero 2010 \\ Enero 2009}{Programador Java Jr. (J2ME / Blackberry)}{SenseByte}{Desarrollador de apliaciones stand-alone y cliente-servidor. Desarrollo de interfaces con harware no estandar utilizado por las aplicaciones desarrolladas.}{}{}
+
+
+%Section: Education
+\section{Estudios}
+
+\cventry{Today--2008}{Licenciatura en Ciencias de la Computación}{Universidad de Buenos Aires - FCEyN}{}{}{}
+
+\section{Idioma Inglés - Nivel Avanzado}
+\cventry{2006}{FCE - First Certificate in English}{AACI}{Puntaje: A\newline
+\hspace*{0.15cm} \emph{University of Cambridge, ESOL Examinations}}{}{}
+
+\cventry{2004}{CILE 3 - Certificado de Inglés}{Facultad de Filosof\'ia y Letras, UBA}%
+{Puntaje: 80/100}{}{}
+
+\section{Perfíl Técnico}
+\subsection{Lenguajes de Programación}
+
+\cvitemwithcomment{Avanzado}{C, Python, Java}{}
+\cvitemwithcomment{Laboral}{Groovy, C++, Intel x86 Assembler, Scala, \LaTeX, Octave}{}
+\cvitemwithcomment{Educativo}{Haskell, ActionScript 2.0, Ruby}{}
+
+\subsection{Logros Técnicos}
+
+\cvitem{}{Trabajo de investigación sobre algoritmos de optimización utilizando SIMD (Intel's SEE instruction set)}
+%\cvitem{}{Research study on algorithm optimization using SIMD (Intel's SEE instruction set).}
+
+\cvitem{}{Trabajo de investigación en métodos heurísticos para jugar un juego de mesa de suma cero}
+%\cvitem{}{Research study on heuristic methods to play a Zero-Sum board game.}
+
+\cvitem{}{Desarrollo de un kernel monolítico básico para la arquitectura x86 basado en las conceptos de UNIX}
+%\cvitem{}{Development of a basic monolithic kernel for x86 architecture based on UNIX ideas.}
+
+\cvitem{}{Experiencia en desarrollo de software en 3 etapas: comenzando con la especificación del modelo a nivel teórico, siguiendo con la definición de las estructuras de datos necesarias para cumplir restricciones de complejidad, para terminar en la implementación del código ya definido.}
+%\cvitem{}{Experience on 3-stage software development starting on model specification on a theoretical level, %
+%moving to data structures definition in order to meet complexity restrictions, finishing with actual implementation %
+%of the defined code.}
+
+\subsection{Transcript}
+\input{transcript.tex}
+
+\subsection{Interests}
+
+\cvitem{}{Special interest in computer music. Looking forward to starting a \textsf{Master's Thesis} on evaluation of perceptual models for rhythms applied to tap dancing.}
+\cvitem{}{Special interest in sound disciplines such as \emph{speech processing} and \emph{speech production}.}
+\cvitem{}{Special interest in \emph{human behaviour modeling} through \emph{machine learning} methods.}
+\cvitem{}{Special interest in low-level software development and \emph{real-time systems}.}
+
+\subsection{Other technical knowledge}
+
+\cvitem{}{Graphic and web design tools expertise: Adobe Photoshop, Adobe Flash}
+
+\cvitem{}{Familiar with both Microsoft and Linux OS Technologies (Windows, Ubuntu)}
+
+
+%\section{References}
+%\cvitemwithcomment{}{\textbf{Lic. Leandro Gleizer}}%
+%{Professor of Journalism, Radio and TV course\qquad
+%\href{mailto:leandrogleizer@hotmail.com}{leandrogleizer@hotmail.com}}\\
+%
+%\cvitemwithcomment{}{\textbf{Gizzella Colonna}}%
+%{AACI English Teacher  \qquad
+%\href{mailto:gizzella32@yahoo.co.uk}{gizzella32@yahoo.co.uk}}\\
+
+\end{document}
