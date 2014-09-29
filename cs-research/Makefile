@@ -12,7 +12,7 @@ transcript.tex : transcript.txt transcript2tex.rb
 	ruby transcript2tex.rb > $@
 
 clean:
-	rm $(ROOT)-$(LANG).aux
-	rm $(ROOT)-$(LANG).out
-	rm $(ROOT)-$(LANG).log
-	rm $(ROOT)-$(LANG).pdf
+	rm -f $(ROOT)-$(LANG).aux
+	rm -f $(ROOT)-$(LANG).out
+	rm -f $(ROOT)-$(LANG).log
+	rm -f $(ROOT)-$(LANG).pdf
