@@ -12,8 +12,8 @@ Operating Systems : 10
 Numerical Methods : 10
 Software Engineering I : 7
 Software Engineering II : 9
-Systems Networks : Final Exam Grade Pending
-Database Systems : Final Exam Pending
+Systems Networks : 10 
+Database Systems : 9 
 Logic and Computability Theory : 9
 Language Theory : 10
 Programming Paradigms : 10
