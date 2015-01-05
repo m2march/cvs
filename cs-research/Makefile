@@ -1,17 +1,19 @@
-.PHONY: clean es
+.PHONY: clean es cleanall
 
 TEX=pdflatex 
 
 ROOT=MMiguel-CV
 LANG=en
 CV=$(ROOT)-$(LANG).pdf
+TRANSCRIPT=transcript-$(LANG).tex
 SRC_MAIN=$(ROOT)-$(LANG).tex
+LANGS=en es
 
-$(CV): $(SRC_MAIN) transcript.tex
+$(CV): $(SRC_MAIN) $(TRANSCRIPT) 
 	$(TEX) $(SRC_MAIN)
 
-transcript.tex : transcript.txt transcript2tex.rb
-	ruby transcript2tex.rb > $@
+$(TRANSCRIPT) : transcript-$(LANG).txt transcript2tex.rb
+	ruby transcript2tex.rb transcript-$(LANG).txt > $@
 
 clean:
 	rm -f $(ROOT)-$(LANG).aux
@@ -21,3 +23,11 @@ clean:
 
 es:
 	make LANG=es
+
+all:
+	-make LANG=es
+	-make LANG=en
+
+cleanall:
+	make LANG=es clean
+	make LANG=en clean

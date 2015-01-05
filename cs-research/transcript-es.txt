@@ -1,0 +1,29 @@
+Obligatorias
+----------
+Análisis Numérico : 9
+Algebra : 5
+Probabilidad y Estadística : 10
+Algoritmos y Estructuras de Datos I : 10
+Algoritmos y Estructuras de Datos II : 10
+Algoritmos y Estructuras de Datos III : 9
+Organización del Computador I : 8
+Organización del Computador II : 8
+Sistemas Operativos : 10
+Métodos Numéricos : 10
+Ingeniería de Software I : 7
+Ingeniería de Software II : 9
+Teoría de las Comunicaciones : 10 
+Bases de Datos : 9 
+Lógica y Computabilidad : 9
+Teoría de Lenguajes : 10
+Paradigmas de Lenguajes de Programación : 10
+
+Optativas
+--------
+Redes Neuronales : 9 
+Introducción a Tecnologías del Habla : 9
+Teoría de Juegos : Final Exam Pending
+Desarrollo de Sistemas Operativos : 10
+Aprendizaje Automático : Final Exam Pending
+
+Grade scale: 10

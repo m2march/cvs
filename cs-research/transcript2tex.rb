@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class Subject 
   attr_accessor :name, :score
 
@@ -51,7 +53,12 @@ def gpa(groups)
   return s.inject(0.0) { |r,x| r += x } / s.size
 end
 
-tf = open("transcript.txt", "r")
+if ARGV.size < 1 
+    puts 'Usage: transcript2tex.rb TRANSCRIPT_FILE'
+    exit()
+end
+
+tf = open(ARGV[0], "r:UTF-8")
 
 tg1 = TranscriptGroup.new(tf)
 tg2 = TranscriptGroup.new(tf)
