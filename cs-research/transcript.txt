@@ -20,7 +20,7 @@ Programming Paradigms : 10
 
 Optional
 --------
-Neural Networks : Final Exam Pending
+Neural Networks : 9 
 Introduction to Speech Technologies : 9
 Game Theory : Final Exam Pending
 Operating Systems Development : 10

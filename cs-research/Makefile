@@ -1,3 +1,5 @@
+.PHONY: clean es
+
 TEX=pdflatex 
 
 ROOT=MMiguel-CV
@@ -16,3 +18,6 @@ clean:
 	rm -f $(ROOT)-$(LANG).out
 	rm -f $(ROOT)-$(LANG).log
 	rm -f $(ROOT)-$(LANG).pdf
+
+es:
+	make LANG=es
