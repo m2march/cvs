@@ -1,0 +1,115 @@
+\documentclass[a4paper]{letter}
+
+\usepackage{todonotes}
+
+\title{Application for PhD position at University of Amsterdam, Faculty of
+Science – Institute for Logic, Language and Computation}
+\author{Martin A. Miguel}
+
+\signature{Martin A. Miguel}
+\address{Buenos Aires, Argentina}
+
+\begin{document}
+
+\maketitle
+
+\begin{letter}{}
+
+\opening{Dear selection committee:}
+
+Hello, my name is Martin Miguel. I am a soon-to-be Computer Science Master from
+the Universidad of Buenos Aires, Argentina. I am currently wrapping up my
+Master's Thesis on music cognition topics. My thesis topic is modeling tactus
+inference (or BI) but looking for a model that can provide insight on how we
+synchronize with music when we hear it. I heard of the doctoral opportunity by
+following the music cognition blog by Prof. Dr. H. Honing.
+
+I got into the field of music cognition out of curiosity for the musical
+processes that happen in a listener's mind. I have been dancing and playing
+music for over 10 years now and I am very curious about what's the magic that
+makes us twitch. In particular, I have been learning to tap dance for the last
+4 years and I have found some rhythmical passages that are particularly
+evocative. This is not common in tap dancing passages and I am afraid that
+comes from lack of theoretical knowledge on how to produce rhythms. The issue
+lead to the idea of trying to model some of the rhythmical cognitive processes
+in play in order to develop a tool that can help tap musicians get closer to
+their own productions. In particular, I want to make situations of tension and
+unexpectedness in music explicit, being this what I believe makes this passages
+so interesting. The focus is on rhythmical expectations, i.e. the timing of the
+events.
+
+% After a lot of rambling I ended up with a model for tactus inference. This is
+% an overly studied subject but I decided to face it again since most models I
+% had encountered (Temperley, Goto, Rosenthal, Schloss) seemed to be based on
+% musical rules that were known to apply in western music, but it was not clear
+% if they worked in other musical styles. In particular, tap dancing takes a lot
+% from african percussive music, which does work differently. With that in mind I
+% stumbled upon Huron (Sweet Anticipation, 2006), whose theoretical view is more
+% general. He speaks of the music cognition process as a task of prediction and
+% understanding. This aligns with my hypothesis of how we create expectation and
+% how tension related issues arise in music. 
+
+% The model I developed has two main characteristics. Firstly, it models the
+% inner tactus expectation as a precise clock. This comes from the fact that
+% musicians train with metronomes, which are precise clocks, and are sensible to
+% very small asynchronisms. I believe part of the musical experience, especially
+% in rich rhythmical passages, comes from this sensibility. I need to observe the
+% contrast between an expressive event and a precise one to elaborate on the
+% musical experience. Secondly, my model was built to produce output continuously
+% as the passage is analysed. This is important since the expectation process
+% when listening to music happens while listening to the song. The twitches and
+% surprises happen in the middle of it. In particular, the model constantly
+% produces tactus hypotheses and contrasts them by how well they predict the
+% passage. I believe one possible source of tension in music comes from the lack
+% of a strong feeling of structure - in this case the constant guiding pulse. The
+% model I developed can be thought out as a re-imagining of Povel and Essens work
+% adapted to obtain continuous feedback and manage imprecise events.
+
+% The model has already been tested as a tactus inference system and works well.
+% I have contrasted it with the Melisma system [Temperley, 2001] and it
+% outperformed it in tap dancing transcriptions. I am still working on getting
+% the data to draw some conclusion on whether the continuous feedback provided by
+% the model is useful to predict features in our process of understanding the
+% rhythm, such as uncertainty or expectation mismatch.
+
+I will be graduating with a Bs + Ms by the end of June. I am very interesting
+in further pursuing my line of research, but I'm looking towards doing so among
+people who know the subject better. Sadly, there is no one else at UBA working
+on these topics. As a future view, I'd like to enhance my model (or work on
+another one) to try to capture the whole human process of understanding
+rhythmicality. I'd also like to apply this rhythm perception model to other
+situations such as the timing of speech in drama performances, oral
+story-telling and stand-up comedy.
+
+The research goals within ILLC match my interests perfectly. Particularly, the
+music cognition group\footnote{http://cf.hum.uva.nl/mmm/} has been researching
+very similar topics with similar approaches. That is, the group focuses mainly
+on timing characteristics of rhythms, focusing on the understanding the origin
+of expressiveness in them and using statistical methodologies for the
+task\footnote{Sadakata. M., Desain, P. \& Honing, H. (2006). The Bayesian way
+to relate rhythm perception and production. Music Perception, 23(3), 267-286.
+(c) 2006}.\todo{review}
+
+% This is definitely a very complicated aim, as you clearly stated
+% in your 2002 paper Structure and Interpretation of Rhythm and Timing. I would
+% like to contribute to that nontheless. Even further in the future, I'd like to
+% see how these models work on language, specifically drama, story-telling and
+% stand up comedy. I have the working theory that rhythmicality in this
+% situations is key for the results of the performance (i.e.: a stand-up comedian
+% being funny or a story teller or actor being captivating. see Pulp Fiction's
+% rhythm in text, for example).
+ 
+% I am hoping that you, or someone you can refer me to, can help me to reach out
+% to people related to these topics (or then again, yourself) and guide myself
+% towards a PhD position on this field.
+
+\todo[inline]{Ending}
+\todo[inline]{Incluir algo del paper escrito (link a docs?)}
+
+\end{letter}
+
+\newpage
+
+\todo[inline]{Carta de diego sobre la fecha de recibida}
+
+\end{document}
