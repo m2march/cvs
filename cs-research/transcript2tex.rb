@@ -72,5 +72,5 @@ puts "\
 \\vspace{10pt}\n\
 \n\
 \\cvitemwithcomment{}{GPA}{#{gpa([tg1,tg2]).round(2)}}\n\
-\\cvitemwithcomment{}{Expected graduation date}{April 2015}\n\
+\\cvitemwithcomment{}{Expected graduation date}{July 2015}\n\
 "
