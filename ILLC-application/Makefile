@@ -1,6 +1,7 @@
 .PHONY: cs-research/MMiguel-CV-en.pdf
 
-mmiguel-illc-application.pdf: illc-application-cover.pdf illc-application-letter.pdf cs-research/MMiguel-CV-en.pdf
+mmiguel-illc-application.pdf: illc-application-cover.pdf illc-application-letter.pdf \
+	RecommendationletterMartinMiguel.pdf cs-research/MMiguel-CV-en.pdf
 	pdftk $^ cat output $@
 
 illc-application-cover.pdf: illc-application-cover.tex
