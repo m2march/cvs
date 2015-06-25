@@ -22,8 +22,8 @@ Optativas
 --------
 Redes Neuronales : 9 
 Introducción a Tecnologías del Habla : 9
-Teoría de Juegos : Final Exam Pending
+Teoría de Juegos : Examen final pendiente
 Desarrollo de Sistemas Operativos : 10
-Aprendizaje Automático : Final Exam Pending
+Aprendizaje Automático : Examen final pendiente
 
-Grade scale: 10
+Escala de notas: 10
