@@ -17,6 +17,7 @@ Database Systems : 9
 Logic and Computability Theory : 9
 Language Theory : 10
 Programming Paradigms : 10
+Master's Thesis : Pending
 
 Optional
 --------
@@ -26,4 +27,11 @@ Game Theory : Final Exam Pending
 Operating Systems Development : 10
 Machine Learning : Final Exam Pending
 
-Grade scale: 10
+
+Word Dictionary
+--------
+grade_scale : Grade Scale
+gpa : GPA
+expected_graduation_date_text : Expected Graduation Date
+expected_graduation_date : Aug 2015
+

@@ -17,6 +17,7 @@ Bases de Datos : 9
 Lógica y Computabilidad : 9
 Teoría de Lenguajes : 10
 Paradigmas de Lenguajes de Programación : 10
+Tesis de Licenciatura : Pendiente
 
 Optativas
 --------
@@ -26,4 +27,10 @@ Teoría de Juegos : Examen final pendiente
 Desarrollo de Sistemas Operativos : 10
 Aprendizaje Automático : Examen final pendiente
 
-Escala de notas: 10
+Word Dictionary
+--------
+grade_scale : Escala de notas 
+gpa : Promedio global
+expected_graduation_date : Ago 2015
+expected_graduation_date_text : Fecha esperada de graduación 
+

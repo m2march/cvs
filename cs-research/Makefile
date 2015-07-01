@@ -20,6 +20,7 @@ clean:
 	rm -f $(ROOT)-$(LANG).out
 	rm -f $(ROOT)-$(LANG).log
 	rm -f $(ROOT)-$(LANG).pdf
+	rm -f transcript-$(LANG).tex 
 
 es:
 	make LANG=es
