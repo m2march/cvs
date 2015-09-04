@@ -19,23 +19,10 @@ class TranscriptGroup
   attr_accessor :name, :subjects
 
   def initialize(io)
-    @@sub_expr = /[\w ]* : [\w*]/
+    name, key_values = read_titled_colon_separated_dictionary(io)
+    @name = name
 
-    name_buf = ""
-    l = io.readline
-    while not /-+/ =~ l
-      name_buf += l
-      l = io.readline
-    end
-    @name = name_buf.rstrip.lstrip
-    sub_buf = []
-    
-    l = io.readline
-    while not io.eof? and @@sub_expr =~ l
-      sub_buf << l.split(":").collect { |x| x.lstrip.rstrip } 
-      l = io.readline
-    end
-    @subjects = sub_buf.collect { |x| Subject.new(x) }
+    @subjects = key_values.collect { |x| Subject.new(x) }
   end
 
   def to_s
@@ -46,6 +33,26 @@ class TranscriptGroup
     r += "}\n"
     return r
   end
+end
+
+def read_titled_colon_separated_dictionary(io)
+    sub_expr = /[\w ]* : [\w*]/
+
+    name_buf = ""
+    l = io.readline
+    while not /-+/ =~ l
+      name_buf += l
+      l = io.readline
+    end
+    name = name_buf.rstrip.lstrip
+    key_values = []
+    
+    l = io.readline
+    while not io.eof? and sub_expr =~ l
+      key_values << l.split(":").collect { |x| x.lstrip.rstrip } 
+      l = io.readline
+    end
+    return [name, key_values]
 end
 
 def gpa(groups)
@@ -62,15 +69,17 @@ tf = open(ARGV[0], "r:UTF-8")
 
 tg1 = TranscriptGroup.new(tf)
 tg2 = TranscriptGroup.new(tf)
+title, key_values = read_titled_colon_separated_dictionary(tf)
+dict = Hash[key_values.collect{ |x| [x[0].to_sym, x[1]] }]
 
 puts tg1.to_s
 puts tg2.to_s
 puts "\
 \\vspace{-14pt}\n\
-\\cvitemwithcomment{}{}{Grade scale: 10}\n\
+\\cvitemwithcomment{}{}{%{grade_scale}: 10}\n\
 \n\
 \\vspace{10pt}\n\
 \n\
-\\cvitemwithcomment{}{GPA}{#{gpa([tg1,tg2]).round(2)}}\n\
-\\cvitemwithcomment{}{Expected graduation date}{July 2015}\n\
-"
+\\cvitemwithcomment{}{%{gpa}}{#{gpa([tg1,tg2]).round(2)}}\n\
+\\cvitemwithcomment{}{%{expected_graduation_date_text}}{%{expected_graduation_date}}\n\
+" % dict
