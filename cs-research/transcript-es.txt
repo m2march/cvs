@@ -31,6 +31,6 @@ Word Dictionary
 --------
 grade_scale : Escala de notas 
 gpa : Promedio global
-expected_graduation_date : Ago 2015
+expected_graduation_date : Abr 2016
 expected_graduation_date_text : Fecha esperada de graduación 
 

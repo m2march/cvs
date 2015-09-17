@@ -33,5 +33,5 @@ Word Dictionary
 grade_scale : Grade Scale
 gpa : GPA
 expected_graduation_date_text : Expected Graduation Date
-expected_graduation_date : Aug 2015
+expected_graduation_date : Apr 2016
 
