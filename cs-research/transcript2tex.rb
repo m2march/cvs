@@ -81,5 +81,4 @@ puts "\
 \\vspace{10pt}\n\
 \n\
 \\cvitemwithcomment{}{%{gpa}}{#{gpa([tg1,tg2]).round(2)}}\n\
-\\cvitemwithcomment{}{%{expected_graduation_date_text}}{%{expected_graduation_date}}\n\
 " % dict
