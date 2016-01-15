@@ -23,7 +23,7 @@ Optional
 --------
 Neural Networks : 9 
 Introduction to Speech Technologies : 9
-Game Theory : Final Exam Pending
+Game Theory : Assisted Only
 Operating Systems Development : 10
 Machine Learning : 10
 

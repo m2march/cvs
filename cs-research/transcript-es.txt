@@ -23,7 +23,7 @@ Optativas
 --------
 Redes Neuronales : 9 
 Introducción a Tecnologías del Habla : 9
-Teoría de Juegos : Examen final pendiente
+Teoría de Juegos : Solo Cursada
 Desarrollo de Sistemas Operativos : 10
 Aprendizaje Automático : 10 
 
