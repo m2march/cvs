@@ -50,6 +50,7 @@
 ## PhD. in Computer Science (Now -- 2016)
 * Universidad de Buenos Aires
 * Under scholarship by CONICET
+* "Temporal pattern and structure inference based in music cognition"
 
 ## Computer Science Program (equivalent to Bachelor + M.S. degree) (2015 -- 2008)
 * Universidad de Buenos Aires - FCEyN
@@ -71,5 +72,6 @@
 
 # Research
 
-## Master's Thesis in Computer Science
+## Master's Thesis in Computer Science (2015)
 * Development of a perceptual model for tactus tracking applied to tap dancing.
+* "Towards a rhythm cognitive model for tap dancing"

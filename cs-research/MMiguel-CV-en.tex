@@ -13,7 +13,7 @@
 \usepackage{float}
 
 \newcommand{\cvgradeitem}[2]{
-    \begin{minipage}[t]{1.2\cvitemwithcommentmainlength}#1\end{minipage}%
+    \begin{minipage}[t]{1.2\cvitemwithcommentskilllength}#1\end{minipage}%
     \hfill% fill of \separatorcolumnwidth
     \begin{minipage}[t]{0.8\cvitemwithcommentcommentlength}\raggedleft\small\bfseries#2\end{minipage}}}
 }
@@ -77,8 +77,12 @@ peformance, end-to-end and regression tests}{}{}
 %Section: Education
 \section{Education}
 
-\cventry{Now--2016}{PhD. in Computer Science}{Universidad de Buenos Aires -
-FCEyN}{under scholarship by CONICET}{}{}
+\cventry{Now--2016}{PhD. in Computer Science}
+{Universidad de Buenos Aires - FCEyN}%
+{under scholarship by CONICET}%
+{\newline\hspace*{0.15cm} 
+\emph{"Temporal pattern and structure inference based in music cognition"}}%
+{}%
 
 \cventry{2015--2008}{Computer Science Program (equivalent to Bachelor + M.S. degree)}{Universidad de Buenos Aires - FCEyN}{}{}{}
 
@@ -99,7 +103,8 @@ FCEyN}{under scholarship by CONICET}{}{}
 \subsection{IT Achievements}
 
 \cvitem{}{\textsf{Master's Thesis} on the evaluation of perceptual models for 
-rhythms applied to tap dancing.}
+rhythms applied to tap dancing. - \emph{"Towards a rhythm cognitive model
+for tap dancing"}, Martin Miguel - 2015}
 
 \cvitem{}{Research study in recommender systems for music.}
 
