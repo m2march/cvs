@@ -1,0 +1,4 @@
+*.aux
+*.log
+*.out
+cs-research/transcript-*.tex
