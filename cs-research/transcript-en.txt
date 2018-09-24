@@ -1,4 +1,4 @@
-Compuslory
+Graduate
 ----------
 Calculus : 9
 Algebra : 5
@@ -17,19 +17,25 @@ Database Systems : 9
 Logic and Computability Theory : 9
 Language Theory : 10
 Programming Paradigms : 10
-Master's Thesis : 10
-
-Optional
---------
 Neural Networks : 9 
 Introduction to Speech Technologies : 9
 Game Theory : Assisted Only
 Operating Systems Development : 10
 Machine Learning : 10
+Master's Thesis : 10
+
+Doctorate
+---------
+Introduction to Data Science : 
+Data Science in R : 
+Bayesian Inference : 
+Integration of Knowledge Bases : 
+Signal Processing :  
 
 
 Word Dictionary
 --------
 grade_scale : Grade Scale
-gpa : GPA
+gpa_name : Graduate GPA
+gpa : 9.14
 
