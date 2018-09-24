@@ -9,13 +9,34 @@ class Subject
   end
 
   def to_s
-    "\\item \\cvgradeitem{#{self.name}}{#{self.score}}"
+    "#{self.name} & #{self.score} \\\\"
   end
   
 end
 
+class SectionlessGroup
+    attr_accessor :subjects
 
-class TranscriptGroup
+    def initialize(subjects)
+        @subjects = subjects 
+    end
+  
+    def write_items(r)
+        r += "\\hspace{1cm}"
+        r += "\\begin{tabular}{p{0.7\\textwidth} p{0.25\\textwidth}}\n"
+        self.subjects.each { |s| r += s.to_s + "\n" }
+        r += "\\end{tabular}\n"
+        r += "\n"
+        return r
+    end
+  
+    def to_s
+        return write_items("")
+    end
+end
+
+
+class TranscriptGroup < SectionlessGroup
   attr_accessor :name, :subjects
 
   def initialize(io)
@@ -26,17 +47,16 @@ class TranscriptGroup
   end
 
   def to_s
-    r = "\\cvitem{#{self.name}}{\n"
-    r += "\\begin{itemize}\n"
-    self.subjects.each { |s| r += s.to_s + "\n" }
-    r += "\\end{itemize}\n"
-    r += "}\n"
-    return r
+    r = "\\subsection{#{self.name}}\n"
+    return write_items(r)
   end
+
+      
 end
 
+
 def read_titled_colon_separated_dictionary(io)
-    sub_expr = /[\w ]* : [\w*]/
+    sub_expr = /[\w ]* (: [\w*])?/
 
     name_buf = ""
     l = io.readline
@@ -72,13 +92,15 @@ tg2 = TranscriptGroup.new(tf)
 title, key_values = read_titled_colon_separated_dictionary(tf)
 dict = Hash[key_values.collect{ |x| [x[0].to_sym, x[1]] }]
 
+tg3 = SectionlessGroup.new([
+    Subject.new(["%{gpa_name}" % dict, "%{gpa}" % dict]),
+    Subject.new(["%{grade_scale}" % dict, 10])
+])
+
+puts "\\begin{minipage}{0.75\\textwidth}"
 puts tg1.to_s
+puts "\\sectionspace"
+puts tg3.to_s
+puts "\\sectionspace"
 puts tg2.to_s
-puts "\
-\\vspace{-14pt}\n\
-\\cvitemwithcomment{}{}{%{grade_scale}: 10}\n\
-\n\
-\\vspace{10pt}\n\
-\n\
-\\cvitemwithcomment{}{%{gpa}}{#{gpa([tg1,tg2]).round(2)}}\n\
-" % dict
+puts "\\end{minipage}"
