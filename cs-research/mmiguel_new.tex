@@ -23,6 +23,25 @@
 
 \newcommand{\jobtitle}[1]{\runsubsection{\normalsize{#1}}}
 
+\newcommand{\jobitem}[4]{%
+    %(title, place, date range, description)
+\vbox{
+\jobtitle{#1}\descript{| #2}
+\location{#3}
+#4
+}
+\sectionspace
+}
+
+\newcommand{\publication}[3]{%(title, authors, description)
+\vbox{
+    \descript{#1}
+    \location{#2}
+    #3
+}
+\sectionspace
+}
+
 \begin{document}
 
 %----------------------------------------------------------------------------------------
@@ -64,56 +83,39 @@ Co-advisor: Mariano Sigman - LNI, UTDT, Buenos Aires, Argentina
 
 \section{Experience}
 
-\jobtitle{Assistant Professor}
-\descript{| Universidad de buenos aires}
-\location{Currently - April 2016}
-Assistant Professor of \emph{Algorithms and Data Structures II}.
+\jobitem{Assistant Professor}{Universidad de buenos aires}
+{Currently - April 2016}
+{Assistant Professor of \emph{Algorithms and Data Structures II}.}
 
-\sectionspace 
 
-\jobtitle{Data Scientist}
-\descript{| Avenida.com}
-\location{March 2016 - January 2016}
-Improvement of search engine configuration, implementation of
-\emph{search-as-you-type} features and assistance in team management.
+\jobitem{Data Scientist}{Avenida.com}
+{March 2016 - January 2016}
+{Improvement of search engine configuration, implementation of
+\emph{search-as-you-type} features and assistance in team management.}
 
-\sectionspace
+\jobitem{Software Engineer}{MateMarote}
+{December 2015 - April 2015}
+{Development of java backend infrastructure and javascript videogames for a
+neuroscientifically based educational software.}
 
-\jobtitle{Software Engineer}
-\descript{| MateMarote}
-\location{December 2015 - April 2015}
-Development of java backend infrastructure and javascript videogames for a
-neuroscientifically based educational software.
+\jobitem{Intern Software Engineer}{Google.com}
+{April 2014 - January 2014}
+{Development and extensions of testing frameworks for
+performance, end-to-end and regression tests.}
 
-\sectionspace
+\jobitem{Java Programmer}{Despegar.com}
+{December 2013 - August 2012}
+{Development of components integrating a larger application system. Development
+of web applications and utility frameworks.}
 
-\jobtitle{Intern Software Engineer}\descript{| Google.com}
-\location{April 2014 - January 2014}
-Development and extensions of testing frameworks for
-performance, end-to-end and regression tests.
+\jobitem{Assistant Professor}{Universidad de Buenos Aires}
+{July 2012 - March 2011}
+{Assistant Professor of \emph{Algorithms and Data Structures I \& II}.}
 
-\sectionspace
-
-\jobtitle{Java Programmer}\descript{| Despegar.com}
-\location{December 2013 - August 2012}
-Development of components integrating a larger application system. Development
-of web applications and utility frameworks.
-
-\sectionspace
-
-\jobtitle{Assistant Professor}\descript{| Universidad de Buenos Aires}
-\location{July 2012 - March 2011}
-Assistant Professor of \emph{Algorithms and Data Structures I \& II}.
-
-\sectionspace
-
-\jobtitle{Jr. Java Programmer (J2ME / Blackberry)}\descript{| SenseByte}
-\location{January 2010 - January 2009}
-Development of both stand-alone and client-server applications. Development of
-applications interfacing with non-standard hardware.
-
-\sectionspace
-
+\jobitem{Jr. Java Programmer (J2ME / Blackberry)}{SenseByte}
+{January 2010 - January 2009}
+{Development of both stand-alone and client-server applications. Development of
+applications interfacing with non-standard hardware.}
 
 
 %------------------------------------------------
@@ -124,37 +126,31 @@ applications interfacing with non-standard hardware.
 
 \subsection{Publications}
 
-\descript{Mate Marote: a BigData platform for massive scale
+\publication{Mate Marote: a BigData platform for massive scale
 educational interventions.}
-\location{Martin A. Miguel}
-45-JAIIO, 2016, Buenos Aires, Argentina (ISSN: 2451-7569).
+{Martin A. Miguel}
+{45-JAIIO, 2016, Buenos Aires, Argentina (ISSN: 2451-7569).}
 
-\sectionspace
 
-\descript{Inferencia de Tactus con Fundamentos Estadı́sticos para Tap-dancing.}
-\location{Martin A. Miguel}
-44-JAIIO, 2015, Rosario, Argentina (ISSN: 2451-7585).
+\publication{Inferencia de Tactus con Fundamentos Estadı́sticos para Tap-dancing.}
+{Martin A. Miguel}
+{44-JAIIO, 2015, Rosario, Argentina (ISSN: 2451-7585).}
 
-\sectionspace
+\publication{From beat tracking to beat expectation}
+{Martin A. Miguel, Diego Fernandez Slezak, Mariano Sigman}
+{(Under review) Music Cognition}
 
-\descript{From beat tracking to beat expectation}
-\location{Martin A. Miguel, Diego Fernandez Slezak, Mariano Sigman}
-(Under review) Music Cognition
-
-\sectionspace
-
-\descript{In progress}
-\location{Martin A. Miguel, Diego Fernandez Slezak, Mariano Sigman}
-Paper describing an experimental setup for tapping used to measure
+\publication{In progress}
+{Martin A. Miguel, Diego Fernandez Slezak, Mariano Sigman}
+{Paper describing an experimental setup for tapping used to measure
 synchronization of responses against the stimuli. The setup requires minimal 
-not-specialized equipment.
+not-specialized equipment.}
 
-\descript{In progress}
-\location{Martin A. Miguel, Diego Fernandez Slezak, Mariano Sigman}
-Paper describing evaluation of beat expectation model against experimentally 
-captured responses of tapping.
+\publication{In progress}
+{Martin A. Miguel, Diego Fernandez Slezak, Mariano Sigman}
+{Paper describing evaluation of beat expectation model against experimentally 
+captured responses of tapping.}
 
-\sectionspace
 
 \section{Scholarships}
 
