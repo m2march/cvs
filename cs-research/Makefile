@@ -1,16 +1,13 @@
 .PHONY: clean es cleanall
 
-TEX=pdflatex 
+TEX=xelatex
 
-ROOT=MMiguel-CV
+ROOT=mmiguel
 LANG=en
 CV=$(ROOT)-$(LANG).pdf
 TRANSCRIPT=transcript-$(LANG).tex
 SRC_MAIN=$(ROOT)-$(LANG).tex
 LANGS=en es
-
-mmiguel_new.pdf: mmiguel_new.tex $(TRANSCRIPT)
-	xelatex $^
 
 $(CV): $(SRC_MAIN) $(TRANSCRIPT) 
 	$(TEX) $(SRC_MAIN)
