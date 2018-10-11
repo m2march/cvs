@@ -1,8 +1,8 @@
 .PHONY: clean es cleanall
 
-TEX=pdflatex 
+TEX=xelatex
 
-ROOT=MMiguel-CV
+ROOT=mmiguel
 LANG=en
 CV=$(ROOT)-$(LANG).pdf
 TRANSCRIPT=transcript-$(LANG).tex

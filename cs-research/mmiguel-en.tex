@@ -1,0 +1,205 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy CV/Resume
+% XeLaTeX Template
+% Version 1.0 (5/5/2014)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Debarghya Das (http://www.debarghyadas.com)
+% With extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important notes:
+% This template needs to be compiled with XeLaTeX.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper]{deedy-resume} % Use US Letter paper, change to a4paper for A4 
+
+\newcommand{\jobtitle}[1]{\runsubsection{\normalsize{#1}}}
+
+\newcommand{\jobitem}[4]{%
+    %(title, place, date range, description)
+\vbox{
+\jobtitle{#1}\descript{| #2}
+\location{#3}
+#4
+}
+\sectionspace
+}
+
+\newcommand{\publication}[3]{%(title, authors, description)
+\vbox{
+    \descript{#1}
+    \location{#2}
+    #3
+}
+\sectionspace
+}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+%\lastupdated % Print the Last Updated text at the top right
+
+\namesection{Martin}{Miguel}{ % Your name
+\urlstyle{same}\url{http://liaa.dc.uba.ar} \\ % Your website, LinkedIn profile or other web address
+\href{mailto:mmiguel@dc.uba.ar}{mmiguel@dc.uba.ar} \\
++541131816018 \\
+Yatay 50, C1184ACB, CABA, Buenos Aires, Argentina
+}
+
+%------------------------------------------------
+% Statement 
+%------------------------------------------------
+
+\section{Mission Statement}
+
+\begin{flushleft}
+I have always been driven by curiosity and problem-solving. This drive took me
+to study Computer Science as a mean to gain the ability to ask good
+questions, find rigorous answers and carry them into real world solutions.
+Throughout my career I have developed both my applied and academic skills. I
+have worked in industry and acquired methodology and know-how and I am now
+working on my PhD degree, learning from research papers and performing
+experiments. Having curiosity as my main motor I have outed from strict
+computer science into empirical sciences, mainly neurosciences. I am
+interested in human perception and the interaction with each other and the
+world. I am currently trying to add knowledge about how we process the world
+and create expectations about the future. More specifically, I am working on
+modeling musical expectations, as it is a familiar
+semi-structured stimuli that makes a good first step in that direction.
+\end{flushleft}
+
+%------------------------------------------------
+% Education
+%------------------------------------------------
+
+\section{Education} 
+
+\descript{PhD in Computer Science}
+\location{Expected April 2021 - April 2016 | UBA, Buenos Aires, Argentina}
+Advisor: Diego Fernandez Slezak - LIAA, DC, UBA, Buenos Aires, Argentina; ICC, CONICET-UBA, Argentina \\
+Co-advisor: Mariano Sigman - LNI, UTDT, Buenos Aires, Argentina
+
+\sectionspace
+
+\descript{Professional Musician}
+\location{Paused July 2017 - April 2015 | Escuela de Música Contemporánea, Buenos Aires,
+Argentina}
+
+\sectionspace
+
+\descript{BS + MS in Computer Science}
+\location{December 2015 - April 2008 | UBA, Buenos Aires, Argentina}
+
+\sectionspace
+
+
+%------------------------------------------------
+% Experience
+%------------------------------------------------
+
+\section{Experience}
+
+\jobitem{Assistant Professor}{Universidad de buenos aires}
+{Currently - April 2016}
+{Assistant Professor of \emph{Algorithms and Data Structures II}.}
+
+
+\jobitem{Data Scientist}{Avenida.com}
+{March 2016 - January 2016}
+{Improvement of search engine configuration, implementation of
+\emph{search-as-you-type} features and assistance in team management.}
+
+\jobitem{Software Engineer}{MateMarote}
+{December 2015 - April 2015}
+{Development of java backend infrastructure and javascript videogames for a
+neuroscientifically based educational software.}
+
+\jobitem{Intern Software Engineer}{Google.com}
+{April 2014 - January 2014}
+{Development and extensions of testing frameworks for
+performance, end-to-end and regression tests.}
+
+\jobitem{Java Programmer}{Despegar.com}
+{December 2013 - August 2012}
+{Development of components integrating a larger application system. Development
+of web applications and utility frameworks.}
+
+\jobitem{Assistant Professor}{Universidad de Buenos Aires}
+{July 2012 - March 2011}
+{Assistant Professor of \emph{Algorithms and Data Structures I \& II}.}
+
+\jobitem{Jr. Java Programmer (J2ME / Blackberry)}{SenseByte}
+{January 2010 - January 2009}
+{Development of both stand-alone and client-server applications. Development of
+applications interfacing with non-standard hardware.}
+
+
+%------------------------------------------------
+% Research
+%------------------------------------------------
+
+\vbox{
+\section{Research}
+
+\subsection{Publications}
+
+\publication{From beat tracking to beat expectation}
+{Martin A. Miguel, Diego Fernandez Slezak, Mariano Sigman}
+{(Under review) Music Cognition}
+
+\publication{(In preparation) Simple framework for rhythmic asynchrony experiments in Python}
+{Martin A. Miguel, Diego Fernandez Slezak, Mariano Sigman}
+{Paper describing an experimental setup for tapping used to measure
+synchronization of responses against the stimuli. The setup requires minimal 
+not-specialized equipment. To be published in \emph{Behavioural Research
+Methods}.}
+
+\publication{(In preparation) Bayesian beat expectation and uncertainty}
+{Martin A. Miguel, Diego Fernandez Slezak, Mariano Sigman}
+{Paper describing evaluation of beat expectation model against experimentally 
+captured responses of tapping. To be published in \emph{Cognitive Science
+Journal}.}
+
+\publication{Mate Marote: a BigData platform for massive scale
+educational interventions.}
+{Martin A. Miguel}
+{45-JAIIO, 2016, Buenos Aires, Argentina (ISSN: 2451-7569).}
+}
+
+
+\publication{Inferencia de Tactus con Fundamentos Estadı́sticos para Tap-dancing.}
+{Martin A. Miguel}
+{44-JAIIO, 2015, Rosario, Argentina (ISSN: 2451-7585).}
+
+
+\section{Scholarships}
+
+\descript{PhD Grant | CONICET, Argentina}
+\location{April 2021 - April 2016}
+
+\sectionspace
+
+%------------------------------------------------
+% Coursework
+%------------------------------------------------
+
+\section{Coursework}
+
+\input{transcript-en.tex}
+
+\sectionspace % Some whitespace after the section
+
+
+
+\end{document}
