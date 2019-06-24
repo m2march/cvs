@@ -12,9 +12,6 @@ LANGS=en es
 $(CV): $(SRC_MAIN) $(TRANSCRIPT) 
 	$(TEX) $(SRC_MAIN)
 
-$(TRANSCRIPT) : transcript-$(LANG).txt transcript2tex.rb
-	ruby transcript2tex.rb transcript-$(LANG).txt > $@
-
 clean:
 	rm -f $(ROOT)-$(LANG).aux
 	rm -f $(ROOT)-$(LANG).out
