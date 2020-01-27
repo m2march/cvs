@@ -1,10 +1,9 @@
-I am Martin Miguel and I am applying for the Google Research Science
-Internship for 2020. 
+I am Martin Miguel and I am applying for the Google Research Internship for 2020. 
 
 I graduated with a combined Bachelor + Master's degree in Computer Science at
 Universidad de Buenos Aires in 2015. I have held various jobs as a software
 engineer: I have developed mobile apps for BlackBerry, worked at two dot coms,
-did an internship at Google and helped develop educational games for kids. I
+did an internship at Google and helped developing educational games for kids. I
 have also held teaching positions regularly during my career.
 
 I am currently enrolled and three years into my PhD, with two years left. 
@@ -32,7 +31,9 @@ at UBA other aspects of cognition are worked at by applying ML models. For
 example, tasks such as analyzing mental states with NLP or recognizing speakers
 and pauses with deep nets in speech recordings are tackled. We are commonly
 debating and helping with each other's projects. The team is also highly
-interdisciplinary, containing physicists, biologists and linguists.
+interdisciplinary, containing physicists, biologists and linguists. The experience in 
+lab has helped me develop hard and soft skills related to learning about new domains
+both technical and problem-related.
 
 Should you consider me, I hope to provide my skills, expertise and good will to
 the development of novel and accurate solutions.
