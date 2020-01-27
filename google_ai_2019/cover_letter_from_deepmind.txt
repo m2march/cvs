@@ -1,0 +1,35 @@
+I am Martin Miguel and I am applying for the Google Research Science
+Internship for 2020. 
+
+I am currently enrolled and three years into my PhD. I graduated with a
+combined Bachelor + Master's degree in Computer Science at Universidad de
+Buenos Aires in 2015 and continued into the Doctorate. My research topic is
+developing models of cognition in time for exploring affect in music. My focus
+is on having computational models of music cognition that integrate stimuli
+over time and provide a certainty metric.
+
+During my PhD I have worked in modeling beat expectation, the most basic
+rhythmic expectation. We took from previous work and produced a model that
+integrates information and provides a certainty metric. Later, we performed an
+experiment to evaluate whether the model's certainty measure related to
+cognition. We managed to assert positively that our model relates to cognition.
+The results were presented in the meeting of the Society for Music Perception
+and Cognition in August 2019. 
+
+The next step is expanding the modeling to capture hierarchical expectations,
+maintaining the focus on continuous evaluation and certainty. We are
+interesting in approaching the problem with the use of Hierarchical Bayesian
+Models. Their inference mechanic allows describing the hierarchical
+understading of music and bayesian models naturaly provide a metric of
+certainty. An alternative venue of interest is in transformer models. They 
+have successfully been used to capture structure and long-time dependencies in
+sequential data, but would need to be adapted to provide a certainty metric.
+
+My approach to research has been question-centered and has turned me to
+incorporate knowledge from areas outside computer science, such as experimental
+psychology and neuroscience. I believe this makes my profile appealing to
+Google AI as I posses the technical background for AI and the hands-on
+experience for research that involves thinking about cognition and the design
+of experiments.
+
+Thank you in advance for reviewing my application.
