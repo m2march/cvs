@@ -1,0 +1,43 @@
+I am Martin Miguel and I am applying for the Google Research Internship for 2020. 
+
+I graduated with a combined Bachelor + Master's degree in Computer Science at
+Universidad de Buenos Aires in 2015. I have held various jobs as a software
+engineer: I have developed mobile apps for BlackBerry, worked at two dot coms,
+did an internship at Google and helped developing educational games for kids. I
+have also held teaching positions regularly during my career.
+
+I am currently enrolled and three years into my PhD, with two years left. 
+During my Bachelor's, I became interested in doing research, using computer
+science and AI models to understand how we interact with our world. More
+specifically, I am interested in how we listen to music, can summarize
+the repetitions and concepts that configure a song and how music suggests and
+defies expectations to generate emotions. My interests are also broader, as
+these questions and models also relate to other forms of communication, such as
+speech and video.
+
+My approach to research is question-driven, putting the question first to then
+find the best tool or model to help answer it. This has led my work to be 
+interdisciplinary, not only learning about computer science and machine
+learning but also about psychology and how to perform experiments. My research
+has included modifying existing computational models to measure expectations in
+music and designing an experiment where I could measure such expectations to
+validate my model's output relevance.
+
+I am keen on interacting with new people from different disciplines to
+understand and address new problems from novel perspectives. Such has been
+required by my research question and has been nurtured at my workplace. 
+At the Applied Artificial Intelligence Lab in the Computer Science Department
+at UBA other aspects of cognition are worked at by applying ML models. For
+example, tasks such as analyzing mental states with NLP or recognizing speakers
+and pauses with deep nets in speech recordings are tackled. We are commonly
+debating and helping with each other's projects. The team is also highly
+interdisciplinary, containing physicists, biologists and linguists. The experience in 
+lab has helped me develop hard and soft skills related to learning about new domains
+both technical and problem-related.
+
+Should you consider me, I hope to provide my skills, expertise and good will to
+the development of novel and accurate solutions.
+
+Thank you in advance for the opportunity.
+Best regards, 
+Martin Miguel
