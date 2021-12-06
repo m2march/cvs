@@ -60,7 +60,7 @@ intelligence.
 * Github:
 github.com/m2march
 
-* Open Science Fundation:
+* Open Science Foundation:
 https://osf.io/s9aym/
 
 * Google Scholar:
