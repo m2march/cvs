@@ -580,6 +580,12 @@
   \honorlongdatestyle{#5} \\
 }
 
+\newcommand*{\jobitemshort}[4]{%
+  \honorpositionstyle{#1},
+  \honorlocationstyle{#2} & \honorlongdatestyle{#3} -
+  \honorlongdatestyle{#4} \\
+}
+
 % Define an environment for jobitem
 \newenvironment{mentorships}{%
   \vspace{\acvSectionContentTopSkip}
