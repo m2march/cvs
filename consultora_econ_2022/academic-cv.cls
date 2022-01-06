@@ -593,6 +593,13 @@
   \pubdescstyle{#5} & \\
 }
 
+\newcommand*{\joblongitemdesc}[5]{%
+  \honorpositionstyle{#1}, & \honorlongdatestyle{#3} -  \honorlongdatestyle{#4}
+  \\
+  \honorlocationstyle{#2} & \\
+  \pubdescstyle{#5} & \\
+}
+
 % Define an environment for jobitem
 \newenvironment{mentorships}{%
   \vspace{\acvSectionContentTopSkip}
@@ -612,8 +619,7 @@
 }
 
 \newcommand*{\namelessMentorship}[2]{%
-  \honortitlestyle{#1} & \honordatestyle{#2}\\
-  \vspace{1mm}
+  \honortitlestyle{#1} & \honordatestyle{#2} \vspace{7mm}\\
 }
 
 % Define an environment for cvskill
