@@ -1,26 +1,87 @@
-\begin{document}
-\section{Introducción/Motivación} 
-    (del tema de investigación)
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage{geometry}
+\usepackage{natbib}
 
-\section{Objetivos} 
+\title{Plan de Investigación  \\ Cargo JTP Dedicación Exclusiva \\
+{\large Martin A. Miguel - LU 181/09 - N. Legajo 167777}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Introducción/Motivación} 
+
+El presente plan de investigación propone el desarrollo de modelos de
+inteligencia artifical que, a partir de un estímulo musical simbólico, estimen
+para distintos momentos del mismo la certeza que tiene un oyente humano en su
+predicción de cómo continuará el mismo.
+
+Las producciones artísticas o de entrenimiento como son las obras artísticas, y
+en particular la música, deben mantener un balance entre la novedad y la
+familiaridad \cite{berlyne1971aesthetics}. Esto es particularmente evidente en
+la música, donde el uso de repeticiones y estructuras de organización
+es un recurso común y fundamental. En este ámbito, un estímulo musical propone
+una estructura a partir de la cual un oyente puede generar predicciones sobre
+cómo continuará. Por otra parte, este mismo también tiene desvíos de la
+estructura propuesta a fin de generar sorpresa. Sin no estuviera establecida
+esta estructura, no habría sensación de sorpresa ya que el oyente no
+establecería predicciones en primer lugar.  De esta forma, un estímulo musical
+debe balancear la novedad y la familiaridad, de forma que un oyente pueda
+generar predicciones que sean luego desafiadas \cite{huron2010musical,
+vuust2018incongruity}.
+
+En este contexto, este trabajo propone desarrollar modelos de inteligencia
+artifical y neurociencia computacional que permitan estimar el grado de certeza
+de un oyente frente a un estímulo musical en distintos puntos del mismo.
+Estas herramientas son de utilidad para proveer información a compositores y
+enriquecer modelos de composición automática. Este análisis también puede
+funcionar como entrada adicional a otras tareas del campo de recuperación de
+información musical (\emph{Music Information Retrieval} o \emph{MIR}, en
+inglés), como ser segmentación o clasificación automática o sistemas de
+recomendación.
+
+Desde las áreas de inteligencia artifical, procesamiento de señales y MIR se
+han desarrollado numerosos modelos computacionales que buscan comprender un
+estímulo musical. Ejemplo de tareas donde esto sucede es composición
+\cite{briot2020deep}, clasificación de emociones \cite{downie2008mood} y
+segmentación automática \cite{mcfee2017evaluating} de estímulos musicales. No
+obstante, estos trabajos se enfocan en resolver la tarea en cuestión y no
+en reflejar la forma en que un oyente humano procesa la música. De esta forma,
+no son herramientas para estimar la certeza de un oyente. 
+
+IDyOM es un modelo estadístico que fue desarrollado para la tarea de estimación
+de certeza en un estímulo musical \cite{pearce2005construction}. El mismo
+permite estimar la probabilidad de distintas continuaciones a un segmento de un
+estímulo musical. Para ello se basa en regularidades estadísticas aprendidas a
+partir de un cuerpo de datos. Dada la distribución de probabilidad de las
+continuaciones, la certeza se estima a partir la entropía de la misma.
+
+
+\section*{Objetivos} 
     (a encarar suponiendo un horizonte de investigación de tres años)
 
-\section{Metodología de trabajo}
+\section*{Metodología de trabajo}
 describa brevemente cómo llevará adelante la
 investigación. Si corresponde, describa las herramientas o equipamiento a utilizar.
 
-\section{Descripción del grupo de investigación}
+\section*{Descripción del grupo de investigación}
 en el que se inserta o se insertará.
 
-\section{Factibilidad}
+\section*{Factibilidad}
 
 Describir equipamiento a utilizar y, de existir y/o
 corresponder, los subsidios
 de investigación que sostengan este desarrollo.
 
-\section{Otros}
+\section*{Otros}
 
 Cualquier otro elemento que considere relevante en el contexto del
 plan. Por ejemplo, su plan de publicación de resultados (conferencias o revistas en las
 cuales espera poder enviar sus resultados).
+
+\section*{Referencias}
+\bibliography{references-index}
+\bibliographystyle{plain}
 \end{document}
