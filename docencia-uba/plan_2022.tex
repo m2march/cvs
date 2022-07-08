@@ -1,16 +1,20 @@
 \documentclass[a4paper,11pt]{article}
 \usepackage[T1]{fontenc}
 \renewcommand*\familydefault{\sfdefault}
-\usepackage{geometry}
+\usepackage[vmargin=3cm]{geometry}
+\usepackage[spanish]{babel}
 \usepackage{natbib}
 
-\title{Plan de Investigación  \\ Cargo JTP Dedicación Exclusiva \\
-{\large Martin A. Miguel - LU 181/09 - N. Legajo 167777}}
+\setcounter{page}{7}
+
+\title{\vspace{-3cm}Plan de Investigación  \\ Cargo JTP Dedicación Exclusiva \\
+{\large Martin A. Miguel - LU 181/09 - N. Legajo 0167777}}
 \date{}
 
 \begin{document}
 \maketitle
 
+\vspace{-2cm}
 \section*{Introducción/Motivación} 
 
 El presente plan de investigación propone el desarrollo de modelos de
@@ -18,31 +22,30 @@ inteligencia artifical que, a partir de un estímulo musical simbólico, estimen
 para distintos momentos del mismo la certeza que tiene un oyente humano en su
 predicción de cómo continuará el mismo.
 
-Las producciones artísticas o de entrenimiento como son las obras artísticas, y
-en particular la música, deben mantener un balance entre la novedad y la
-familiaridad \cite{berlyne1971aesthetics}. Esto es particularmente evidente en
-la música, donde el uso de repeticiones y estructuras de organización
-es un recurso común y fundamental. En este ámbito, un estímulo musical propone
-una estructura a partir de la cual un oyente puede generar predicciones sobre
-cómo continuará. Por otra parte, este mismo también tiene desvíos de la
-estructura propuesta a fin de generar sorpresa. Sin no estuviera establecida
-esta estructura, no habría sensación de sorpresa ya que el oyente no
-establecería predicciones en primer lugar.  De esta forma, un estímulo musical
-debe balancear la novedad y la familiaridad, de forma que un oyente pueda
-generar predicciones que sean luego desafiadas \cite{huron2010musical,
-vuust2018incongruity}.
+Las producciones artísticas o de entretenimiento, deben mantener un balance
+entre la novedad y la familiaridad \cite{berlyne1971aesthetics}. Esto es
+particularmente evidente en la música, donde el uso de repeticiones y
+estructuras de organización es un recurso común y fundamental. En este ámbito,
+un estímulo musical propone una estructura a partir de la cual un oyente puede
+generar predicciones sobre como continuará. Por otra parte, la música también
+tiene desvíos de la estructura propuesta a fin de generar sorpresa. Sin no
+estuviera establecida esta estructura, no habría sensación de sorpresa ya que
+el oyente no establecería predicciones en primer lugar.  De esta forma, un
+estímulo musical debe balancear la novedad y la familiaridad, de forma que un
+oyente pueda generar predicciones que sean luego desafiadas
+\cite{huron2010musical, vuust2018incongruity}.
 
 En este contexto, este trabajo propone desarrollar modelos de inteligencia
-artifical y neurociencia computacional que permitan estimar el grado de certeza
+artificial y neurociencia computacional que permitan estimar el grado de certeza
 de un oyente frente a un estímulo musical en distintos puntos del mismo.
 Estas herramientas son de utilidad para proveer información a compositores y
 enriquecer modelos de composición automática. Este análisis también puede
 funcionar como entrada adicional a otras tareas del campo de recuperación de
 información musical (\emph{Music Information Retrieval} o \emph{MIR}, en
-inglés), como ser segmentación o clasificación automática o sistemas de
+inglés), como ser segmentación o clasificación automática, así como sistemas de
 recomendación.
 
-Desde las áreas de inteligencia artifical, procesamiento de señales y MIR se
+Desde las áreas de inteligencia artificial, procesamiento de señales y MIR se
 han desarrollado numerosos modelos computacionales que buscan comprender un
 estímulo musical. Ejemplo de tareas donde esto sucede es composición
 \cite{briot2020deep}, clasificación de emociones \cite{downie2008mood} y
@@ -56,32 +59,143 @@ de certeza en un estímulo musical \cite{pearce2005construction}. El mismo
 permite estimar la probabilidad de distintas continuaciones a un segmento de un
 estímulo musical. Para ello se basa en regularidades estadísticas aprendidas a
 partir de un cuerpo de datos. Dada la distribución de probabilidad de las
-continuaciones, la certeza se estima a partir la entropía de la misma.
+continuaciones, la certeza se estima a partir la entropía de la misma. La
+distribución de probabilidad estimada por el modelo, así como la estimación de
+certeza, fueron contrastadas con datos obtenidos de oyentes humanos
+\cite{hansen2014uncertainty, hansen2016bebop}. En los experimentos, los
+participantes debían, para un contexto musical dado, puntuar el nivel de
+incertidumbre que tenían para posibles continuaciones. También, luego del
+contexto, eran presentados con distintas continuaciones y debían reportar que
+tan inesperadas eran las mismas. La estimación de probabilidad de IDyOM para las
+continuaciones mostró correlaciones significativas con las medidas de sorpresa
+de los participantes (r = 0.695, p < 0.01). De igual manera, la estimación de
+entropía del modelo correlacionó significativamente con los reportes de
+incertidumbre de los participantes (r = 0.466, p = 0.02).
 
+El funcionamiento de IDyOM se basa en cadenas de Markov de orden variable,
+donde la distribución de probabilidad de una continuación para un contexto
+musical se establece a partir de contabilizar cuantos contextos similares al
+evaluado están presentes en los datos de entrenamiento y poseen la continuación
+en cuestión. Este mecanismo de inferencia puede ser extendido considerando
+otros mecanismos de aprendizaje y resumen que son utilizados en la cognición
+humana. Se considera que la misma es jerárquica, manteniendo concepciones del
+mundo de distintos niveles de abstracción \cite{friston2010free}. Por ejemplo,
+en el procesamiento de secuencias, las personas mantienen distribuciones de
+transición (similares a las cadenas de Markov), pero también realizan procesos
+de agrupación de la secuencia en secciones relevantes. Asimismo, pueden
+abstraer patrones algebraicos abstractos que luego se instancian con valores
+específicos (por ejemplo, la secuencia abstracta $AAB$, que puede instanciarse
+en $112$ o $225$) y abstraer estas aún más en árboles de parseo
+\cite{dehaene2015neural}.
 
 \section*{Objetivos} 
-    (a encarar suponiendo un horizonte de investigación de tres años)
+
+Este plan de investigación propone desarrollar modelos para la estimación de la
+certeza a lo largo del tiempo que tendría un oyente humano sobre las
+continuaciones de un estímulo musical dado un contexto.
+
+En primer lugar, se propone la extensión de las ideas propuestas en el
+modelo IDyOM \cite{pearce2005construction} con nuevos mecanismos de inferencia
+jerárquica como los mencionados en la sección antecedentes
+\cite{dehaene2015neural}. 
+
+En segundo lugar, se propone reutilizar modelos de composición automática que
+aprenden recurrencias estadísticas en estímulos musicales para obtener
+estimadores de certeza. Esto puede realizarse a partir de métricas obtenidas de
+las activaciones de la red neuronal, así como reutilizando las capas inferiores
+de las mismas y agregando una nueva capa superior entrenada para esta nueva
+tarea (proceso conocido como \emph{fine-tunning}).
+
+En tercer lugar, se propone realizar un experimento para recolectar información
+de certeza en contextos musicales. Estos datos serán utilizados para evaluar
+los modelos así como para mejorar el proceso de entrenamiento al contar con
+mayor cantidad de datos.
 
 \section*{Metodología de trabajo}
-describa brevemente cómo llevará adelante la
-investigación. Si corresponde, describa las herramientas o equipamiento a utilizar.
+
+Para extender las propuestas de IDyOM, se propone el uso de modelos de
+inferencia Bayesiana jerárquica que utilizan gramáticas para poder describir
+abstracciones que permiten razonar sobre los datos de entrada
+\cite{tenenbaum2011grow}. Por un lado, el uso de gramáticas permite hacer
+descripciones basadas en árboles de secuencias de datos como son los estímulos
+musicales. Estas gramáticas, por ejemplo, permiten reflejar la forma jerárquica
+en la que se anota la música escrita en partituras, donde los elementos
+constituyentes (las notas) se agrupan de forma recursiva
+\cite{fitch2013meter-vs-pulse}.
+Esta técnica de modelado ha mostrado ser flexible para representar distintos
+tipos de datos (taxonomías de animales, ubicaciones espaciales, distancia entre
+colores) y obtener información relevante a partir de pocos datos
+\cite{tenenbaum2011grow}. Asimismo, el modelado del aprendizaje utilizando
+gramáticas ha podido reflejar características de procesamiento humano, como ser
+tiempo de respuesta o dificultad de la tarea \cite{tano2018learning}.
+
+Para obtener métricas a partir de modelos de redes neuronales, proponemos
+inspeccionar modelos de composición automática secuenciales. Estos modelos
+son entrenados para, que dado un contexto musical, estimar una distribución de
+probabilidad de continuaciones de forma que repliquen el dataset
+\cite{huang2018music}. De esta forma, y al igual que en IDyOM, la certeza del
+oyente puede estimarse a partir de la entropía de esta distribución de
+probabilidad. Esta metodología fue utilizada con éxito en un trabajo previo
+para obtener un estimador de la certeza del pulso musical
+\cite{pironio2021clarity}.
+
+Para el experimento, es posible realizar tareas donde los participantes
+reportan su certeza respecto de la continuación de distintos contextos
+musicales \cite{hansen2014uncertainty}. Para tomar medidas durante el proceso
+de escucha sin inducir una pausa, es posible utilizar mediciones fisiológicas
+como pupilometría \cite{zhang2020using}, 
 
 \section*{Descripción del grupo de investigación}
-en el que se inserta o se insertará.
+
+El trabajo de investigación se realizará dentro del Laboratorio de Inteligencia
+Artificial Aplicada. El mismo se enfoca en la aplicación de técnicas de
+inteligencia artificial y aprendizaje automático a distintos problemas. En
+particular, se mantienen líneas de investigación donde se desarrollan modelos
+que buscan reflejar y predecir características de la cognición humana (como ser
+la trayectoria de movimientos oculares en la percepción de imágenes
+\cite{bujia2022modeling}, estimación de riesgo de psicosis
+\cite{bedi2015psychosis} o predictibilidad de palabras en un texto
+\cite{bianchi2020predictability}).
 
 \section*{Factibilidad}
 
-Describir equipamiento a utilizar y, de existir y/o
-corresponder, los subsidios
-de investigación que sostengan este desarrollo.
+Para el desarrollo de los modelos de inferencia no es necesario equipo
+especializado. Para el trabajo con redes neuronales puede ser necesario, según
+si se deben entrenar modelos, computadoras equipadas con placas de vídeo, las
+cuales son accesibles en el laboratorio. Para la realización de experimento se
+requiere una sala donde conducirlos. El laboratorio cuenta con una sala
+designada para ello. Además cuenta con una cámara de seguimiento ocular en
+caso de recolectar datos de pupilometría.
 
 \section*{Otros}
 
-Cualquier otro elemento que considere relevante en el contexto del
-plan. Por ejemplo, su plan de publicación de resultados (conferencias o revistas en las
-cuales espera poder enviar sus resultados).
+Se espera publicar el trabajo de modelado utilizando modelado basado en
+gramáticas en la revista de investigación técnica en música \emph{Journal of
+New Music Research}. Se espera publicar el trabajo realizado a partir de
+redes neuronales en la conferencia de la \emph{International Society of Music
+  Information Retrieval} (ISMIR). Los datos experimentales recolectados podrán
+  ser publicados en la misma conferencia.
 
-\section*{Referencias}
+Algunas secciones de este plan pueden ser llevadas a cabo en conjunto con un
+estudiante, ya sea como tesis de grado o beca de investigación. Un ejemplo es
+la exploración sobre modelos de redes neuronales, donde, dado un modelo ya
+seleccionado y un conjunto de datos de evaluación establecido, la/el estudiante
+deberá familiarizarse con el modelo, agregar código para obtener métricas del
+mismo, realizar una evaluación de las mismas y presentar los resultados.
+
+\noindent\begin{tabular}{p{0.45\textwidth} p{0.45\textwidth}}
+    \vspace{2cm} & \\
+    % & \includegraphics[height=40pt]{firma_mmiguel.png} 
+    %  & \includegraphics[height=40pt]{firma_dfslezak_small.jpg} \\
+       \rule[0pt]{2in}{0.5pt} & 
+        \rule[0pt]{2in}{0.5pt} & 
+        Postulante & Profesor \\
+        (Martin A. Miguel) &  (Diego Fernandez Slezak)
+        \end{tabular}
+
+
+{\small
 \bibliography{references-index}
 \bibliographystyle{plain}
+}
 \end{document}
