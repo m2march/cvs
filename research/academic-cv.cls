@@ -599,9 +599,10 @@
   \end{center}
 }
 
-\newcommand*{\mentorship}[3]{%
+\newcommand*{\mentorship}[4]{%
   \honorpositionstyle{#1},
-  \honortitlestyle{#2} & \honordatestyle{#3}\\
+  \honortitlestyle{#2} & \honordatestyle{#4}\\
+  {\small \honorlocationstyle{#3}} & \\
 }
 
 % Define an environment for cvskill
