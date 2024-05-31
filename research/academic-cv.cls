@@ -74,6 +74,7 @@
   pdfsubject={},
   pdfkeywords={}
 }
+\RequirePackage{longtable}
 % Needed for hanging indents
 \usepackage{hanging}
 
@@ -306,8 +307,8 @@
 % here, you can change the spacing in the header information
 \newcommand{\acvHeaderNameDelim}{\space}
 \newcommand{\acvHeaderAfterNameSkip}{2mm}
-\newcommand{\acvHeaderAfterPositionSkip}{2mm}
-\newcommand{\acvHeaderAfterAddressSkip}{-.5mm}
+\newcommand{\acvHeaderAfterPositionSkip}{1mm}
+\newcommand{\acvHeaderAfterAddressSkip}{1mm}
 \newcommand{\acvHeaderIconSep}{\space}
 \newcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 \newcommand{\acvHeaderAfterSocialSkip}{6mm}
@@ -593,9 +594,9 @@
   \begin{center}
     \setlength\tabcolsep{0pt}
     \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth -4.5cm} R{4.5cm}}
+    \begin{longtable}{@{\extracolsep{\fill}} L{\textwidth -4.5cm} R{4.5cm}}
 }{%
-    \end{tabular*}
+    \end{longtable}
   \end{center}
 }
 
