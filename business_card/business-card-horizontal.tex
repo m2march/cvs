@@ -1,0 +1,89 @@
+% !TEX TS-program = pdflatex
+
+% You could use xelatex for easier font customization,
+%   but it requires more intervention to make FontAwesome work.
+%   see (e.g.) https://tex.stackexchange.com/questions/132888/fontawesome-font-not-found: 
+
+
+\documentclass[10pt, oneside, final]{article}
+
+% \usepackage{tikz}
+\usepackage{parskip}           % remove paragraph indents
+\usepackage{graphicx}
+\usepackage{xcolor}          % more colour options
+\usepackage{tikz}            % drawing
+\usepackage{fancyqr}
+
+% set all margins to 0 and set business card size
+\usepackage[
+  paperwidth = 3.5in,
+  paperheight = 2in,
+  margin = 0.2in,
+  noheadfoot
+]{geometry}
+
+% interline spacing
+\setlength{\baselineskip}{0cm} % between baselines
+\setlength{\topskip}{0pt}      % between header and text block
+
+% wrapping text around figure
+\usepackage{wrapfig}
+
+\usepackage{fontawesome}                           % FA icons
+% load external font
+\setmainfont{Fira Sans}
+\setsansfont{Fira Sans}
+\setmonofont{Fira Mono}
+
+\newlength{\seplinewidth}    \setlength{\seplinewidth}{2cm}
+\newlength{\seplineheight}   \setlength{\seplineheight}{1pt}
+\newlength{\seplinedistance} \setlength{\seplinedistance}{0.3cm}
+
+\definecolor{seplinecolour}{HTML}{037d7e}  
+\definecolor{iconcolour}{HTML}{2f3142}     % dark
+\definecolor{textcolour}{HTML}{2f3142}     % dark
+\definecolor{jobtitlecolour}{HTML}{474a65} % light dark
+
+\begin{document}
+  \thispagestyle{empty}
+  
+  \begin{wrapfigure}{r}{0.3\textwidth}
+    \vspace{1em}
+  {\fancyqr[level=M]{
+      BEGIN:VCARD
+VERSION:3.0
+N:Martin;Miguel;
+TITLE:
+ORG:The Neuro - McGill University \& Western University
+TEL;TYPE=MOBILE:+1 437 929 6016
+EMAIL:martin.miguel@mcgill.ca
+EMAIL:malejand@uwo.ca
+URL:https://mmiguel.liaa.dc.uba.ar
+END:VCARD}}
+  \end{wrapfigure}
+
+  \large\textsf{\textbf{Martin - March - Miguel}} 
+
+  \vspace{-1em}
+  \begin{tikzpicture}
+      \draw[line width=\seplineheight,color=seplinecolour] (-\seplinewidth/2,0) -- ++(\seplinewidth,0);
+  \end{tikzpicture} 
+
+  {\color{jobtitlecolour}Post-doctoral fellow} 
+
+  \vspace{-.5em}
+  {\small\color{textcolour}
+  {The Neuro - McGill University \& \\ Western University}
+  }
+  
+  \vspace{-1em}
+  {\scriptsize\color{iconcolour}
+  \vfill 
+  {\faEnvelope} \texttt{martin.miguel@mcgill.ca} \\ 
+  {\faEnvelope} \texttt{malejand@uwo.ca} \\
+  {\faGithub} \texttt{m2march} \hfill
+  {\faPhone} +1{\textendash}437{\textendash}929{\textendash}6016 \hfill
+  {\faGlobe} \texttt{mmiguel.liaa.dc.uba.ar}
+}
+
+\end{document}
